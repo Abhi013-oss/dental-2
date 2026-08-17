@@ -44,11 +44,11 @@
   position: relative;
   box-shadow: 0 2px 8px rgba(14, 51, 64, 0.12);
   transition: transform 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
 }
 
 .brand:hover .logoBadge {
   transform: translateY(-1px);
-  background-color: var(--color-navy-dark);
 }
 
 .logoInitial {
@@ -166,7 +166,7 @@
 .mobileControls {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 0.5rem;
 }
 
 @media (min-width: 992px) {
@@ -179,7 +179,7 @@
   width: 38px;
   height: 38px;
   border-radius: var(--radius-sm);
-  background-color: var(--color-mint);
+  background-color: var(--color-mint-soft);
   color: var(--color-navy);
   display: flex;
   align-items: center;
@@ -195,7 +195,7 @@
 
 .menuToggle {
   background: transparent;
-  border: 1px solid var(--border-color-subtle);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   width: 40px;
   height: 40px;
@@ -208,9 +208,8 @@
 }
 
 .menuToggle:hover {
-  background-color: var(--color-mint);
+  background-color: var(--color-mint-soft);
   color: var(--color-teal);
-  border-color: var(--color-teal-border);
 }
 
 /* MOBILE DRAWER */
@@ -224,7 +223,7 @@
   z-index: 999;
   overflow-y: auto;
   animation: slideDownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  border-top: 1px solid var(--border-color-card);
+  border-top: 1px solid var(--color-border);
 }
 
 .mobileDrawerContent {
@@ -257,12 +256,12 @@
 }
 
 .mobileNavLink:hover {
-  background-color: var(--color-mint-light);
+  background-color: var(--color-mint-soft);
   color: var(--color-teal);
 }
 
 .mobileActive {
-  background-color: var(--color-mint);
+  background-color: var(--color-mint-soft);
   color: var(--color-navy);
   font-weight: 700;
 }
@@ -280,7 +279,7 @@
   flex-direction: column;
   gap: 0.875rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color-subtle);
+  border-top: 1px solid var(--color-border);
 }
 
 .mobileLocationMeta {
@@ -308,5 +307,21 @@
 @media (max-width: 991px) {
   .header {
     height: var(--header-height-mobile);
+  }
+}
+
+@media (max-width: 360px) {
+  .clinicName {
+    font-size: 0.95rem;
+  }
+  .clinicSub {
+    font-size: 0.6rem;
+  }
+  .logoBadge {
+    width: 36px;
+    height: 36px;
+  }
+  .logoInitial {
+    font-size: 1.05rem;
   }
 }
