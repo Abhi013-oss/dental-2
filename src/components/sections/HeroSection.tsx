@@ -34,7 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onBookClick }) => {
 
       <div className={`container ${styles.heroContainer}`}>
         {/* LEFT COLUMN: HERO CONTENT */}
-        <div className={styles.heroContent}>
+        <div className={`${styles.heroContent} fade-up`}>
           {/* EYEBROW */}
           <div className={styles.eyebrowWrapper}>
             <span className={styles.eyebrowBadge}>
@@ -94,7 +94,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onBookClick }) => {
         </div>
 
         {/* RIGHT COLUMN: HERO PHOTOGRAPHY & OVERLAY CARDS */}
-        <div className={styles.heroVisualWrapper}>
+        <div className={`${styles.heroVisualWrapper} zoom-in delay-200`}>
           <div className={styles.imageFrame}>
             {/* HERO PHOTOGRAPHY */}
             <img

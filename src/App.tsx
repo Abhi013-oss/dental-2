@@ -39,11 +39,15 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { TREATMENTS_DATA } from './data/treatments.data';
 import { DOCTORS_DATA } from './data/doctors.data';
 import type { TreatmentReason } from './types/appointment.types';
+import { useScrollAnimation } from './utils/useScrollAnimation';
 
 export const App: React.FC = () => {
   const [activePath, setActivePath] = useState(window.location.pathname || '/');
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedGalleryItem, setSelectedGalleryItem] = useState<GalleryItem | null>(null);
+
+  // Initialize smooth scroll-reveal animations on route change / scroll
+  useScrollAnimation(activePath);
 
   useEffect(() => {
     const handlePopState = () => {

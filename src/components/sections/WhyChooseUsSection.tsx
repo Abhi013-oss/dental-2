@@ -30,12 +30,14 @@ export const WhyChooseUsSection: React.FC = () => {
     },
   ];
 
+  const delays = ['delay-100', 'delay-200', 'delay-300', 'delay-400'];
+
   return (
     <section className={styles.section} aria-label="Why Choose Garg Dental Clinic">
       <div className="container">
         <div className={styles.grid}>
           {/* LEFT: HEADING */}
-          <div className={styles.leftCol}>
+          <div className={`${styles.leftCol} fade-up`}>
             <SectionHeader
               eyebrow="WHY GARG DENTAL"
               title="A Dental Experience Built Around Trust and Clarity."
@@ -46,8 +48,8 @@ export const WhyChooseUsSection: React.FC = () => {
 
           {/* RIGHT: FEATURE LIST */}
           <div className={styles.featuresList}>
-            {reasons.map((item) => (
-              <div key={item.num} className={styles.featureCard}>
+            {reasons.map((item, idx) => (
+              <div key={item.num} className={`${styles.featureCard} fade-up ${delays[idx % delays.length]}`}>
                 <div className={styles.featureNumber} aria-hidden="true">
                   {item.num}
                 </div>

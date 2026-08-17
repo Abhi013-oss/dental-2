@@ -27,6 +27,8 @@ export const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({ onNavigate
     }
   };
 
+  const delays = ['delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500'];
+
   return (
     <section id="treatments" className={styles.section} aria-label="Clinic Treatments Overview">
       <div className="container">
@@ -38,16 +40,17 @@ export const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({ onNavigate
         />
 
         <div className={styles.grid}>
-          {CLINIC_CONFIG.keyFocusAreas.map((treatment) => (
-            <TreatmentCard
-              key={treatment.id}
-              title={treatment.title}
-              shortDescription={treatment.shortDescription}
-              slug={treatment.slug}
-              isKeyFocus={treatment.isKeyFocus}
-              icon={getTreatmentIcon(treatment.id)}
-              onNavigate={onNavigate}
-            />
+          {CLINIC_CONFIG.keyFocusAreas.map((treatment, idx) => (
+            <div key={treatment.id} className={`fade-up ${delays[idx % delays.length]}`}>
+              <TreatmentCard
+                title={treatment.title}
+                shortDescription={treatment.shortDescription}
+                slug={treatment.slug}
+                isKeyFocus={treatment.isKeyFocus}
+                icon={getTreatmentIcon(treatment.id)}
+                onNavigate={onNavigate}
+              />
+            </div>
           ))}
         </div>
       </div>

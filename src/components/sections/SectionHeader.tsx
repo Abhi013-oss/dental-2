@@ -18,7 +18,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   showGoldLine = false,
   className = '',
 }) => {
-  const wrapperClass = [styles.header, styles[align], className].filter(Boolean).join(' ');
+  const wrapperClass = [styles.header, styles[align], 'fade-up', className].filter(Boolean).join(' ');
 
   return (
     <div className={wrapperClass}>
