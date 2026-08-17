@@ -1,0 +1,41 @@
+.nav {
+  padding: 0.75rem 0;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.link {
+  color: var(--color-text-muted);
+  transition: var(--transition-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-teal);
+}
+
+.separator {
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.current {
+  color: var(--color-navy);
+  font-weight: 600;
+}

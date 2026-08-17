@@ -1,0 +1,227 @@
+.hero {
+  background-color: var(--color-warm-white);
+  padding: 3.5rem 0 4.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.breadcrumbWrapper {
+  margin-bottom: 2rem;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 0.85rem;
+}
+
+.goldLine {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-gold-accent);
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-navy);
+  margin-bottom: 1.25rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.sectionWhite {
+  background-color: var(--color-white);
+  padding: 5.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3rem;
+  align-items: center;
+  background-color: var(--color-warm-white);
+  border-radius: var(--radius-xl, 16px);
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+  margin-bottom: 3.5rem;
+}
+
+.summaryLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ratingScore {
+  font-family: var(--font-heading);
+  font-size: 3.75rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1;
+}
+
+.starRow {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0.75rem 0;
+  color: var(--color-gold-accent);
+}
+
+.reviewMeta {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.reviewSub {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+  margin-bottom: 1.25rem;
+}
+
+.summaryRight {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  border-left: 3px solid var(--color-teal);
+  padding-left: 1.75rem;
+}
+
+.filterControls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filterTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.tabBtn {
+  background-color: var(--color-warm-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-navy);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full, 20px);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tabBtn:hover {
+  background-color: var(--color-mint-soft);
+  color: var(--color-teal);
+}
+
+.activeTab {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+.activeTab:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.sortGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.sortSelect {
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.disclaimerText {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .headline {
+    font-size: 2.15rem;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.75rem;
+  }
+
+  .summaryRight {
+    border-left: none;
+    border-top: 2px solid var(--color-teal);
+    padding-left: 0;
+    padding-top: 1.25rem;
+  }
+
+  .reviewsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .headline {
+    font-size: 1.85rem;
+  }
+
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterControls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

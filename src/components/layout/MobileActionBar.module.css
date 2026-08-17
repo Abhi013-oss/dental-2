@@ -1,0 +1,52 @@
+.actionBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 990;
+  background-color: var(--color-navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.65rem 1rem;
+  box-shadow: 0 -4px 20px rgba(14, 51, 64, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .actionBar {
+    display: none;
+  }
+}
+
+.actionItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem 0.25rem;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: var(--transition-color);
+}
+
+.actionItem:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: var(--color-white);
+}
+
+.bookItem {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+.bookItem:hover {
+  background-color: var(--color-teal-hover);
+}

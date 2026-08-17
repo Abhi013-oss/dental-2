@@ -1,0 +1,132 @@
+.formCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl, 16px);
+  padding: 2.5rem;
+  box-shadow: 0 12px 32px rgba(14, 51, 64, 0.06);
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 0.925rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.fullWidth {
+  margin-bottom: 1.25rem;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+}
+
+.honeypot {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.privacyNote {
+  background-color: var(--color-mint-soft);
+  border-left: 3px solid var(--color-teal);
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.85rem;
+  color: var(--color-navy);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.errorMessage {
+  background-color: #FDF2F2;
+  border: 1px solid #F8B4B4;
+  color: #9B1C1C;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.fieldErrorText {
+  color: #C81E1E;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  font-weight: 600;
+}
+
+.successCard {
+  background-color: var(--color-warm-white);
+  border: 1px solid var(--color-teal);
+  border-radius: var(--radius-xl, 16px);
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--color-navy);
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-mint-soft);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.successTitle {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+}
+
+.successDesc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.successActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .formCard, .successCard {
+    padding: 1.75rem 1.25rem;
+  }
+}

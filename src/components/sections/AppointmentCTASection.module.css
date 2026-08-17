@@ -1,0 +1,116 @@
+.section {
+  padding: 4.5rem 0;
+  position: relative;
+}
+
+.cardNavy {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 2.5rem;
+  border: 1px solid var(--color-navy-light);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.cardWarmWhite {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 2.5rem;
+  border: 1px solid var(--border-color-card);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.goldTopLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-gold-accent);
+}
+
+.content {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 1rem;
+}
+
+.titleNavy {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.titleWhite {
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.descriptionNavy {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--font-size-body-lg);
+  line-height: 1.6;
+  margin-bottom: 2.25rem;
+}
+
+.descriptionWhite {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-body-lg);
+  line-height: 1.6;
+  margin-bottom: 2.25rem;
+}
+
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.contactBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contactBadgeWhite {
+  background-color: var(--color-mint);
+  color: var(--color-navy);
+  border: 1px solid rgba(21, 154, 156, 0.2);
+}

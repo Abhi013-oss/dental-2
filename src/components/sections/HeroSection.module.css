@@ -1,0 +1,525 @@
+.heroSection {
+  position: relative;
+  background-color: var(--color-warm-white);
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  overflow: hidden;
+  min-height: calc(100vh - var(--header-height-desktop));
+  display: flex;
+  align-items: center;
+}
+
+/* SUBTLE DENTAL ARCH VISUAL MOTIF */
+.motifBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.mintShape {
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 680px;
+  height: 680px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 246, 245, 0.85) 0%, rgba(242, 250, 249, 0.3) 65%, transparent 100%);
+  filter: blur(40px);
+}
+
+.accentCircle {
+  position: absolute;
+  bottom: -60px;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(21, 154, 156, 0.06) 0%, transparent 70%);
+}
+
+.archMotif {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  width: 580px;
+  height: 580px;
+}
+
+/* HERO LAYOUT CONTAINER */
+.heroContainer {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .heroContainer {
+    grid-template-columns: 46% 54%;
+    gap: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .heroContainer {
+    grid-template-columns: 44% 56%;
+    gap: 4.5rem;
+  }
+}
+
+/* LEFT COLUMN: CONTENT */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.eyebrowWrapper {
+  margin-bottom: 1.25rem;
+  opacity: 0;
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.eyebrowBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-mint);
+  border: 1px solid var(--color-mint-border);
+  color: var(--color-teal);
+  font-family: var(--font-body);
+  font-size: 0.78125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eyebrowIcon {
+  color: var(--color-teal);
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4.2vw, 3.65rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--color-navy);
+  margin-bottom: 1.25rem;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  max-width: 540px;
+  opacity: 0;
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+/* CTA BUTTON ROW */
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  opacity: 0;
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.primaryCta {
+  box-shadow: 0 4px 14px rgba(21, 154, 156, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.primaryCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(21, 154, 156, 0.35);
+}
+
+.secondaryCta {
+  background-color: var(--color-white) !important;
+  color: var(--color-navy) !important;
+  border-color: var(--color-navy) !important;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.secondaryCta:hover {
+  background-color: var(--color-mint) !important;
+  color: var(--color-navy-dark) !important;
+  border-color: var(--color-navy-dark) !important;
+  transform: translateY(-1px);
+}
+
+/* LOCAL CONTACT & HOURS BAR */
+.localInfoBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-navy);
+  padding: 0.75rem 1.15rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--border-color-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.infoIcon {
+  color: var(--color-teal);
+  flex-shrink: 0;
+}
+
+.infoDivider {
+  color: var(--color-text-light);
+}
+
+/* RIGHT COLUMN: HERO PHOTOGRAPHY & OVERLAYS */
+.heroVisualWrapper {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(14, 51, 64, 0.1);
+  border: 1px solid rgba(14, 51, 64, 0.08);
+  background-color: var(--color-white);
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.imageFrame:hover .heroImage {
+  transform: scale(1.02);
+}
+
+.imageOverlayGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(14, 51, 64, 0.02) 0%, rgba(14, 51, 64, 0.25) 100%);
+  pointer-events: none;
+}
+
+/* FLOATING CARD 1: TRUST INDICATOR */
+.trustCard {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background-color: var(--color-white);
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 32px rgba(14, 51, 64, 0.15);
+  border: 1px solid rgba(14, 51, 64, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  z-index: 3;
+  backdrop-filter: blur(4px);
+  animation: cardReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+.ratingBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-mint-light);
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-mint-border);
+}
+
+.ratingScore {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1;
+}
+
+.starRow {
+  display: flex;
+  gap: 2px;
+  margin-top: 3px;
+}
+
+.starIcon {
+  flex-shrink: 0;
+}
+
+.reviewTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewCountText {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.2;
+}
+
+.reviewSourceLabel {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* FLOATING CARD 2: HOURS & STATUS CARD */
+.hoursCard {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--color-white);
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 32px rgba(14, 51, 64, 0.15);
+  border: 1px solid rgba(14, 51, 64, 0.08);
+  z-index: 3;
+  min-width: 190px;
+  animation: cardReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+.hoursCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-color-subtle);
+}
+
+.hoursCardTitle {
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+}
+
+.hoursStatusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  box-shadow: 0 0 0 3px rgba(46, 139, 112, 0.2);
+  animation: pulseDot 2s infinite;
+}
+
+.hoursRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.hoursDays {
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.hoursTime {
+  color: var(--color-teal);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hoursSundayRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.hoursSundayLabel {
+  color: var(--color-text-muted);
+}
+
+.hoursClosedBadge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background-color: var(--color-warm-white);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color-subtle);
+}
+
+/* SPECIALTY CHAMPAGNE ACCENT TAG */
+.specialtyTag {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background-color: rgba(14, 51, 64, 0.92);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(201, 169, 110, 0.5);
+  box-shadow: 0 4px 12px rgba(14, 51, 64, 0.2);
+  z-index: 3;
+}
+
+/* KEYFRAME ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pulseDot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 139, 112, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(46, 139, 112, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 139, 112, 0);
+  }
+}
+
+/* MOBILE RESPONSIVE TWEAKS */
+@media (max-width: 767px) {
+  .heroSection {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    min-height: auto;
+  }
+
+  .headline {
+    font-size: clamp(1.85rem, 7.5vw, 2.5rem);
+    line-height: 1.12;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .ctaRow > * {
+    width: 100%;
+  }
+
+  .localInfoBar {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .infoDivider {
+    display: none;
+  }
+
+  .heroVisualWrapper {
+    margin-top: 1rem;
+  }
+
+  .hoursCard {
+    position: static;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+
+  .trustCard {
+    position: static;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+
+  .specialtyTag {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.6875rem;
+  }
+}
+
+/* REDUCED MOTION ASSIST */
+@media (prefers-reduced-motion: reduce) {
+  .eyebrowWrapper,
+  .headline,
+  .description,
+  .ctaRow,
+  .localInfoBar,
+  .heroVisualWrapper,
+  .trustCard,
+  .hoursCard {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

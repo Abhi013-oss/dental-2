@@ -1,0 +1,234 @@
+.hero {
+  background-color: var(--color-warm-white);
+  padding: 3.5rem 0 4.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.breadcrumbWrapper {
+  margin-bottom: 2rem;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.portraitWrapper {
+  position: relative;
+}
+
+.portraitFrame {
+  position: relative;
+  border-radius: var(--radius-xl, 18px);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(14, 51, 64, 0.1);
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-mint-soft);
+  border: 1px solid var(--color-border);
+}
+
+.placeholderOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  height: 100%;
+  text-align: center;
+  color: var(--color-navy);
+  gap: 1.25rem;
+}
+
+.champagneBadge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background-color: var(--color-gold-accent);
+  color: var(--color-navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.doctorName {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.qualification {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-teal);
+  margin-bottom: 0.35rem;
+}
+
+.specialization {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.sectionWhite {
+  background-color: var(--color-white);
+  padding: 5.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionWarm {
+  background-color: var(--color-warm-white);
+  padding: 5.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.readableText {
+  max-width: 760px;
+  margin-top: 1.5rem;
+}
+
+.paragraph {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.matrixGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.matrixBox {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(14, 51, 64, 0.03);
+}
+
+.matrixLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-teal);
+}
+
+.matrixValue {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-top: 0.35rem;
+}
+
+.practiceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.practiceCard {
+  background-color: var(--color-warm-white);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.practiceTitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.practiceDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.approachList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.approachCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md, 10px);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.approachIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-mint-soft);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .portraitFrame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .doctorName {
+    font-size: 2.15rem;
+  }
+
+  .matrixGrid, .practiceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .doctorName {
+    font-size: 1.85rem;
+  }
+}

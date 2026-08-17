@@ -1,0 +1,118 @@
+/* ==========================================
+   GARG DENTAL CLINIC & IMPLANT CENTRE
+   DESIGN SYSTEM TOKENS - PHASE 1 EXPANDED
+   ========================================== */
+
+:root {
+  /* 1. PRIMARY — DEEP DENTAL NAVY (15-25% visual weight) */
+  --color-navy: #0E3340;
+  --color-navy-dark: #0A252F;
+  --color-navy-light: #154556;
+  --color-navy-hover: #1A5266;
+
+  /* 2. PRIMARY ACCENT — DENTAL TEAL (5-10% visual weight) */
+  --color-teal: #159A9C;
+  --color-teal-hover: #128486;
+  --color-teal-active: #0F6E70;
+  --color-teal-subtle: rgba(21, 154, 156, 0.1);
+  --color-teal-focus: rgba(21, 154, 156, 0.25);
+
+  /* 3. SOFT DENTAL MINT */
+  --color-mint: #E8F6F5;
+  --color-mint-light: #F2FAF9;
+  --color-mint-border: rgba(21, 154, 156, 0.18);
+
+  /* 4. WARM CLINICAL WHITE (Primary website bg surface) */
+  --color-warm-white: #FAFCFB;
+
+  /* 5. PURE WHITE (Cards, forms, navbar) */
+  --color-white: #FFFFFF;
+
+  /* 6. PRIMARY TEXT */
+  --color-text-primary: #17252B;
+
+  /* 7. MUTED TEXT */
+  --color-text-muted: #64757A;
+  --color-text-light: #8E9E9B;
+
+  /* 8. PREMIUM ACCENT — CHAMPAGNE GOLD (Max 1-2% micro-accent presence) */
+  --color-gold-accent: #C9A96E;
+  --color-gold-hover: #B8965B;
+  --color-gold-subtle: rgba(201, 169, 110, 0.12);
+  --color-gold-border: rgba(201, 169, 110, 0.35);
+
+  /* FUNCTIONAL SYSTEM FEEDBACK COLORS (SYSTEM USE ONLY) */
+  --color-success: #2E8B70;
+  --color-success-bg: rgba(46, 139, 112, 0.1);
+  --color-warning: #D99A32;
+  --color-warning-bg: rgba(217, 154, 50, 0.1);
+  --color-error: #C94B4B;
+  --color-error-bg: rgba(201, 75, 75, 0.1);
+  --color-emergency: #C94B4B;
+
+  /* TYPOGRAPHY FAMILY TOKENS */
+  --font-heading: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* TYPOGRAPHY FONT SIZES */
+  --font-size-display: clamp(3rem, 5.5vw, 4.25rem); /* 48-68px */
+  --font-size-h1: clamp(2.25rem, 4vw, 3.25rem);    /* 36-52px */
+  --font-size-h2: clamp(1.75rem, 3vw, 2.5rem);     /* 28-40px */
+  --font-size-h3: clamp(1.35rem, 2.2vw, 1.75rem);  /* 22-28px */
+  --font-size-h4: clamp(1.15rem, 1.6vw, 1.35rem);  /* 18-22px */
+  --font-size-h5: 1.125rem;                        /* 18px */
+  --font-size-body-lg: 1.125rem;                   /* 18px */
+  --font-size-body: 1rem;                          /* 16px */
+  --font-size-body-sm: 0.875rem;                   /* 14px */
+  --font-size-caption: 0.75rem;                    /* 12px */
+
+  /* SPACING SCALE SYSTEM (4px base) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-7: 2rem;     /* 32px */
+  --space-8: 2.5rem;   /* 40px */
+  --space-9: 3rem;     /* 48px */
+  --space-10: 4rem;    /* 64px */
+  --space-11: 5rem;    /* 80px */
+  --space-12: 6rem;    /* 96px */
+  --space-13: 7.5rem;  /* 120px */
+
+  /* BORDER STYLING (1px subtle neutral) */
+  --border-color-subtle: rgba(100, 117, 122, 0.15);
+  --border-color-card: rgba(14, 51, 64, 0.08);
+  --border-color-focus: var(--color-teal);
+  --border-subtle: 1px solid var(--border-color-subtle);
+  --border-card: 1px solid var(--border-color-card);
+
+  /* BORDER RADIUS SYSTEM */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* SHADOW SYSTEM (4 subtle levels) */
+  --shadow-sm: 0 2px 8px rgba(14, 51, 64, 0.04);
+  --shadow-md: 0 6px 20px rgba(14, 51, 64, 0.06);
+  --shadow-lg: 0 12px 36px rgba(14, 51, 64, 0.08);
+  --shadow-sticky: 0 4px 24px rgba(14, 51, 64, 0.07);
+  --shadow-dropdown: 0 10px 30px rgba(14, 51, 64, 0.12);
+
+  /* CONTAINER TOKENS */
+  --max-content-width: 1280px;
+  --container-padding-desktop: 4rem;  /* 64px */
+  --container-padding-tablet: 2rem;   /* 32px */
+  --container-padding-mobile: 1.25rem;/* 20px */
+
+  --header-height-desktop: 80px;
+  --header-height-mobile: 68px;
+
+  /* TRANSITIONS & ANIMATIONS (150-350ms) */
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.15s ease;
+  --transition-color: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}

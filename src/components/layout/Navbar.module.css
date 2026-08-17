@@ -1,0 +1,312 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-height-desktop);
+  background-color: var(--color-warm-white);
+  border-bottom: 1px solid rgba(14, 51, 64, 0.06);
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.scrolled {
+  background-color: var(--color-white);
+  border-bottom-color: rgba(14, 51, 64, 0.09);
+  box-shadow: 0 4px 20px rgba(14, 51, 64, 0.04);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* BRAND WORDMARK IDENTITY */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logoBadge {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(14, 51, 64, 0.12);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.brand:hover .logoBadge {
+  transform: translateY(-1px);
+  background-color: var(--color-navy-dark);
+}
+
+.logoInitial {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.logoDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-teal);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.clinicName {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.05;
+  letter-spacing: 0.06em;
+}
+
+.clinicSub {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-teal);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+/* DESKTOP NAV LIST */
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .desktopNav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  transition: color 0.2s ease;
+  padding: 0.5rem 0;
+  position: relative;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: var(--color-teal);
+}
+
+.navLink.active {
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-teal);
+  border-radius: 2px;
+  animation: expandLine 0.2s ease-out;
+}
+
+@keyframes expandLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.desktopActions {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .desktopActions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+
+.phoneLink {
+  text-decoration: none;
+}
+
+/* MOBILE CONTROLS */
+.mobileControls {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+@media (min-width: 992px) {
+  .mobileControls {
+    display: none;
+  }
+}
+
+.mobilePhoneBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-mint);
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.mobilePhoneBtn:hover {
+  background-color: rgba(21, 154, 156, 0.15);
+  color: var(--color-teal);
+}
+
+.menuToggle {
+  background: transparent;
+  border: 1px solid var(--border-color-subtle);
+  border-radius: var(--radius-sm);
+  width: 40px;
+  height: 40px;
+  color: var(--color-navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.menuToggle:hover {
+  background-color: var(--color-mint);
+  color: var(--color-teal);
+  border-color: var(--color-teal-border);
+}
+
+/* MOBILE DRAWER */
+.mobileDrawer {
+  position: fixed;
+  top: var(--header-height-mobile);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-warm-white);
+  z-index: 999;
+  overflow-y: auto;
+  animation: slideDownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border-top: 1px solid var(--border-color-card);
+}
+
+.mobileDrawerContent {
+  padding: 1.5rem 1.25rem 2.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - var(--header-height-mobile));
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileNavLink {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  min-height: 48px;
+}
+
+.mobileNavLink:hover {
+  background-color: var(--color-mint-light);
+  color: var(--color-teal);
+}
+
+.mobileActive {
+  background-color: var(--color-mint);
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
+.mobileActiveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-teal);
+}
+
+.mobileActionsArea {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color-subtle);
+}
+
+.mobileLocationMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    height: var(--header-height-mobile);
+  }
+}

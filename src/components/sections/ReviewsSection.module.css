@@ -1,0 +1,85 @@
+.section {
+  background-color: var(--color-white);
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.summaryCard {
+  background-color: var(--color-warm-white);
+  border-radius: var(--radius-lg, 14px);
+  padding: 2.25rem;
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 16px rgba(14, 51, 64, 0.04);
+}
+
+.ratingScore {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1;
+}
+
+.starRow {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0.85rem 0;
+}
+
+.star {
+  color: var(--color-gold-accent);
+}
+
+.reviewCountText {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.sourceLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.reviewsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .summaryCard {
+    padding: 1.5rem;
+  }
+
+  .ratingScore {
+    font-size: 2.75rem;
+  }
+}

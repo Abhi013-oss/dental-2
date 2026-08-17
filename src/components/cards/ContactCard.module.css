@@ -1,0 +1,39 @@
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-mint);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(21, 154, 156, 0.2);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.detail {
+  font-family: var(--font-body);
+  font-size: 0.925rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.action {
+  margin-top: auto;
+}

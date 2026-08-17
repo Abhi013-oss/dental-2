@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.selectContainer {
+  position: relative;
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  background-color: var(--color-white);
+  border: 1px solid var(--border-color-card);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-color);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.select:focus {
+  border-color: var(--color-teal);
+  box-shadow: 0 0 0 3px var(--color-teal-focus);
+}
+
+.selectError {
+  border-color: var(--color-error);
+}
+
+.chevron {
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}

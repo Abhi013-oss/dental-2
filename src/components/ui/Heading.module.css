@@ -1,0 +1,54 @@
+.wrapper {
+  margin-bottom: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 0.65rem;
+}
+
+.goldLine {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-gold-accent);
+  margin-right: 0.4rem;
+}
+
+.title {
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  max-width: 680px;
+}
+
+.center .subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}

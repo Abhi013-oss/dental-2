@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-teal);
+  cursor: pointer;
+  margin-top: 0.15rem;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-navy);
+  line-height: 1.4;
+}
